@@ -1,0 +1,36 @@
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>File Sharing App</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/stylesheets/styles.css') }}" " />
+    </head>
+
+    <body>
+        <div class="content-container">
+            <h1>File Sharing App</h1>
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <form action="/uploadfile/" method="post" enctype="multipart/form-data">
+                    <br>
+                    <label for="file" class="custom-file-input">
+                        Choose a file to upload  <input type="file" id="file" name="file" />
+                    </label>
+                    <br /><br />
+                    <input type="submit" class="upload-button" value="Upload" />
+                </form>
+            </div>
+            <!-- Download Section -->
+            <div class="download-section">
+                <h2>Download Files</h2>
+                <ul>
+                    {% for filename in files %}
+                    <li><a href="/downloadfile/{{ filename }}">{{ filename }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+    </body>
+
+    </html>
