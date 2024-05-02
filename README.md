@@ -1,4 +1,4 @@
-# P2P-FTP-SHARE OLEH FARHAN SYIHAB
+# P2P-FTP-SHARING 
 
 P2P FTP Sharing adalah program sederhana pengimplementasian FTP Sharing dengan protokol P2P untuk mengirimkan file secara langsung.
 
